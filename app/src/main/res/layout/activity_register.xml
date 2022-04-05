@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".Register"
+    >
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:paddingTop="10dp"
+
+        android:src="@drawable/main_logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Jawandhamal Dhannamal"
+        android:textSize="28sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic"
+        android:paddingTop="20dp"
+        />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="Create Your New Account"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="#2196F6"
+
+        />
+    <EditText
+        android:id="@+id/Full_Name"
+        android:layout_width="345dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:hint="Enter your Full Name"
+        android:background="@color/teal_700"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="italic"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        />
+
+    <EditText
+        android:id="@+id/Email_Address"
+        android:layout_width="345dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:hint="Enter Email ID"
+        android:inputType="textEmailAddress"
+        android:background="@color/teal_700"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="italic"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        />
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="345dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:background="@color/teal_700"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="italic"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        />
+    <EditText
+        android:id="@+id/Phone_No"
+        android:layout_width="345dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:hint="Enter 10 Digit Phone No"
+        android:inputType="phone"
+        android:background="@color/teal_700"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="italic"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        />
+
+    <Button
+        android:id="@+id/register_button"
+        android:text="Register"
+        android:layout_width="345dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/Login_Button"
+        android:layout_width="230dp"
+        android:layout_height="31dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="Already Registered? Login Here"
+        android:textAlignment="center"
+        android:textColor="#2E7D32"
+        />
+
+    <ProgressBar
+        android:id="@+id/Register_Progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-40dp"
+        android:visibility="invisible" />
+
+</LinearLayout>

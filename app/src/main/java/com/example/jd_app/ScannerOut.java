@@ -168,8 +168,9 @@ public class ScannerOut extends AppCompatActivity {
     }
 
     private void deleteItemToSheet(String PhoneNo) {
+//        https://script.google.com/macros/s/AKfycbz_GPd0X9mMX2WC35LrXEP3CfFeZgfauzetN7-wk4n2xTIiaK1ba21qj2hnxe4a50UkVQ/exec
 
-        String url = "https://script.google.com/macros/s/AKfycbyXzPBv0jvGS_RAgp-n7JoUTVOCeI-s6KQWupVtKnBkvBJjlyENedXxoEgXTDT8v7bnhQ/exec";
+        String url = "https://script.google.com/macros/s/AKfycbyvFZYWFcwgC6IsoNdqrtgrCTZWMpF3Ihl2Pn00oD7JUa12zvHB3rtQTuGDPksXXOu7_Q/exec";
         StringRequest stringRequestOut = new StringRequest(Request.Method.POST, url, response -> {
 
         }, error -> {

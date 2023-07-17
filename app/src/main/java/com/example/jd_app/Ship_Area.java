@@ -14,6 +14,7 @@ import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -55,18 +56,23 @@ public class Ship_Area extends AppCompatActivity {
                                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
+                                        int count = 0 ;
                                         for(DataSnapshot ds: snapshot.getChildren()){
                                             String Number = ds.getKey();
-                                            String Message_Gujarati = "ચેતવણી ! \nતરત જ ડોરમીટોરી વિસ્તાર ખાલી કરો! ";
-                                            String Message_Hindi = "चेतावनी!\nडारमेट्री क्षेत्र को तुरंत खाली करें!";
-                                            String Message = "Emergency ! \nVacate the Dormitory Area Immediately !";
-
+                                            String Message_Gujarati = "ચેતવણી ! \nતરત જ જહાજ વિસ્તાર ખાલી કરો! ";
+                                            String Message_Hindi = "चेतावनी!\nजहाज क्षेत्र को तुरंत खाली करें!";
+                                            String Message = "Emergency ! \nVacate the Ship Area Immediately !";
                                             SmsManager smsDormitory = SmsManager.getDefault();
-
                                             smsDormitory.sendTextMessage(Number,null,Message_Gujarati,null,null);
                                             smsDormitory.sendTextMessage(Number,null,Message_Hindi,null,null);
                                             smsDormitory.sendTextMessage(Number, null, Message, null, null);
+
+                                            count++;
+
                                         }
+
+                                        Toast.makeText(Ship_Area.this, "SMS Sent Successfully to " +count+" users in Ship Area", Toast.LENGTH_LONG).show();
+
 
                                     }
                                 })

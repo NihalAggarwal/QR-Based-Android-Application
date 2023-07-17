@@ -180,8 +180,9 @@ public class ScannerIN extends AppCompatActivity {
 
 
     private void addItemToSheet(String fullname, String PhoneNo, String JoiningDate, String BloodGroup, String Designation, String ESIC_No){
+//        https://script.google.com/macros/s/AKfycbz_QtrrVgvvcB2ymBHSnEew0gfB8j4MLLZ3eUTZ5NoCP5zmvoLQUPetZ7JZ4xlHfjqD_w/exec
 
-        String url = "https://script.google.com/macros/s/AKfycbz_QtrrVgvvcB2ymBHSnEew0gfB8j4MLLZ3eUTZ5NoCP5zmvoLQUPetZ7JZ4xlHfjqD_w/exec"; //AddItems Version 6
+        String url = "https://script.google.com/macros/s/AKfycbz0pVuHwxaJsW02ep9IpfiYRpjY16QCmkf1DGUOM-e6DA_CEPiP_uK4Q3gHN3QMklNpXg/exec"; //AddItems Version 6
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, response -> {
 
         }, error -> {

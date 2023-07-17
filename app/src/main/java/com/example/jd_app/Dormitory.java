@@ -14,6 +14,7 @@ import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -85,11 +86,14 @@ public class Dormitory extends AppCompatActivity {
                                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
+
+                                        int temp = 0;
                                         for(DataSnapshot ds: snapshot.getChildren()){
+                                            temp++;
                                             String Number = ds.getKey();
-                                            String Message_Gujarati = "ચેતવણી ! \nતરત જ ડોરમીટોરી વિસ્તાર ખાલી કરો! ";
-                                            String Message_Hindi = "चेतावनी!\nडारमेट्री क्षेत्र को तुरंत खाली करें!";
-                                            String Message = "Emergency ! \nVacate the Dormitory Area Immediately !";
+                                            String Message_Gujarati = "ચેતવણી ! \nતરત જ પ્લોટ વિસ્તાર ખાલી કરો! ";
+                                            String Message_Hindi = "चेतावनी!\nप्लाट क्षेत्र को तुरंत खाली करें!";
+                                            String Message = "Emergency ! \nVacate the Plot Area Immediately !";
 
                                             SmsManager smsDormitory = SmsManager.getDefault();
 
@@ -98,6 +102,8 @@ public class Dormitory extends AppCompatActivity {
                                             smsDormitory.sendTextMessage(Number, null, Message, null, null);
 
                                         }
+
+                                        Toast.makeText(Dormitory.this, "SMS Sent Successfully to " +temp+" users in Plot Area", Toast.LENGTH_LONG).show();
 
                                     }
                                 })

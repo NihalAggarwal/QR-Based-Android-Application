@@ -175,7 +175,7 @@ public class Scanner_In_Ship_Area extends AppCompatActivity {
 
     private void addItemToSheet(String fullname, String PhoneNo, String JoiningDate, String BloodGroup, String Designation, String ESIC_No){
 
-        String url = "https://script.google.com/macros/s/AKfycbzpKcdwxZ5KC4doZdZRgKhu_ZXUg3Hz0XdI3wpTY2w-lRy2jQZ3nzQBVW1p1LNpPPzTig/exec"; //AddItems Version 15
+        String url = "https://script.google.com/macros/s/AKfycbz0pVuHwxaJsW02ep9IpfiYRpjY16QCmkf1DGUOM-e6DA_CEPiP_uK4Q3gHN3QMklNpXg/exec"; //AddItems Version 15
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, response -> {
 

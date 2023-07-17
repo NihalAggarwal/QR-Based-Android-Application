@@ -78,13 +78,13 @@ public class Login extends AppCompatActivity {
                 });
             }
         });
-        rRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(getApplicationContext(), Register_2.class));
-            }
-        });
+//        rRegister.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                FirebaseAuth.getInstance().signOut();
+//                startActivity(new Intent(getApplicationContext(), Register_2.class));
+//            }
+//        });
         rforgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

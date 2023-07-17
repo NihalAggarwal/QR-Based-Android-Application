@@ -165,7 +165,7 @@ public class Scanner_Out_Ship_Area extends AppCompatActivity {
 
     private void deleteItemToSheet(String PhoneNo) {
 
-        String url = "https://script.google.com/macros/s/AKfycbxQ0tXOrdSSuGp_wAJQxXsyPdCVLMGgIOahDwcBs3zETmSOjIRtlQUECvVXlC5nzkwsfQ/exec"; //deleteItem version 22
+        String url = "https://script.google.com/macros/s/AKfycbyvFZYWFcwgC6IsoNdqrtgrCTZWMpF3Ihl2Pn00oD7JUa12zvHB3rtQTuGDPksXXOu7_Q/exec"; //deleteItem version 22
         StringRequest stringRequestOut = new StringRequest(Request.Method.POST, url, response -> {
 
         }, error -> {

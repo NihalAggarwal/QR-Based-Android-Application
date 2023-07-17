@@ -239,7 +239,7 @@ public class QR_Generator extends AppCompatActivity {
         Uri image=data.getData();
         mimageToUpload.setImageURI(image);
 
-        uploadToFireBase(image);
+//        uploadToFireBase(image);
     }
     private void uploadToFireBase(Uri image){
         Sref = FirebaseStorage.getInstance().getReference();
@@ -288,7 +288,6 @@ public class QR_Generator extends AppCompatActivity {
         byte[] bitmapData1 = stream1.toByteArray();
         ImageData imagedata1 = ImageDataFactory.create(bitmapData1);
         Image image1 = new Image(imagedata1).setWidth(180).setHorizontalAlignment(HorizontalAlignment.CENTER).setHeight(210);
-
         Drawable d2 = getDrawable(R.drawable.emergency_contact);
         Bitmap bitmap2 = ((BitmapDrawable)d2).getBitmap();
         ByteArrayOutputStream stream2 = new ByteArrayOutputStream();

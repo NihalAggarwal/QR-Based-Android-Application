@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         spinner1=findViewById(R.id.spinner);
         List<String> categories = new ArrayList<>();
         categories.add(0,"Choose the Category to Count");
-        categories.add("Dormitory");
+        categories.add("Plot Area");
         categories.add("Ship Area");
         //categories.add("Plot Area");
 
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                     String item = parent.getItemAtPosition(position).toString();
                     Toast.makeText(parent.getContext(), "Selected: "+item, Toast.LENGTH_SHORT).show();
 
-                    if(parent.getItemAtPosition(position).equals("Dormitory")){
+                    if(parent.getItemAtPosition(position).equals("Plot Area")){
                         Intent intent = new Intent(MainActivity.this, Dormitory.class);
                         startActivity(intent);
                     }
